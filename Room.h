@@ -1,20 +1,20 @@
 #pragma once
 #include "raylib.h"
 
-class Room
+class cRoom
 {
 public:
-	Room();
-	~Room();
+	cRoom();
+	~cRoom();
 	void Place();
 	void Rotate();
 protected:
-	char buffer[50]; //for debug purposes
-	int scale;
-	float cornersize;
-	Vector2 position;
-	Color Kolor;
-	Vector2 doors[4];
+	char Buffer[50]; //for debug purposes
+	int Scale;
+	float fCornersize;
+	Vector2 vPosition;
+	Color roomColor;
+	Vector2 vDoors[4];
 	enum Rotation { HORIZONTAL = 90, VERTICAL = 0 };
 	struct Wall
 	{
@@ -22,7 +22,6 @@ protected:
 		float y;
 		float angle;
 	};
-
 private:
 	Rectangle Block;
 	void PutBlock(float X, float Y, float Rot, Color Kolor);
